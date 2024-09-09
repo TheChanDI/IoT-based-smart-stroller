@@ -1,4 +1,6 @@
 // Code for the smart stroller.
+// When one or both touch sensor are activated, it unlocks the wheel i.e solenoid else 
+// it locks the wheel.
 
 byte pushPullSolenoid = 4; // This is the pin for LED light
 byte touchLeftSensor = 3;  // Pin for the left touch sensor
