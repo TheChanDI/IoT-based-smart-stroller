@@ -22,8 +22,15 @@ void loop()
     isRightTouchPressed = digitalRead(touchRightSensor);
 
     Serial.print(isLeftTouchPressed, isRightTouchPressed);
-  
-    // Start the solenoid -> Unhold the brake.
+
+    //break unbreak the stroller/pram
+    brakingFunctionality()
+ 
+}
+
+//break unbreak the stroller
+void brakingFunctionality() {
+   // Start the solenoid -> Unhold the brake.
     if(isLeftTouchPressed == true || isRightTouchPressed == true) { 
   	  digitalWrite(pushPullSolenoid, HIGH);
   
